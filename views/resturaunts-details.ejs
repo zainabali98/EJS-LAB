@@ -12,5 +12,12 @@
     <%= restaurant.address%>
     <%= restaurant.isOpen%>
     <%= restaurant.phone%>
+
+
+    <% for (menu of restaurant.menu){ %>
+        <p><%= menu.name %></p>
+        <p><%= 'Price:' + " " +  menu.price %></p>
+    <p><%=  'Rating:' + " " + menu.rating %></p>
+    <% }%>
 </body>
 </html>
