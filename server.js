@@ -102,7 +102,9 @@ app.get('/resturaunts/:id', (req, res) => {
    const foundRestaurant = restaurants.find((restaurant) => {
     return restaurant.id === Number(req.params.id)
   })
-  res.render('resturaunts-details.ejs')
+  res.render('resturaunts-details.ejs', {
+    restaurant: foundRestaurant
+  })
   console.log(foundRestaurant)
 })
 

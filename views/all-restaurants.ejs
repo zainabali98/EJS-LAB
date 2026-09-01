@@ -6,14 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <%- include('./navbar')%>
 
 <h1>All restaurants</h1>
 
 <% for(restaurant of restaurants){ %>
     
-<a href="/resturaunts/<%= restaurant.id %>"><%= restaurant.name %></a>
+<a href="/resturaunts/<%= restaurant.id %>">
+    <ol>
+  <%= restaurant.name %> -
+  
+  <% if (restaurant.isOpen === false) { %>
+    Closed
+  <% } %>
+</ol>
 
 <% }%>
 </body>
 </html>
+
