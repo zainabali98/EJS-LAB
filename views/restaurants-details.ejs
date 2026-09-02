@@ -15,7 +15,7 @@
 
 
     <% for (menu of restaurant.menu){ %>
-        <p><%= menu.name %></p>
+        <p><%= menu.name %> <%= menu.name + (menu.rating === 5 ? ' ⭐' : '') %></p>
         <p><%= 'Price:' + " " +  menu.price %></p>
     <p><%=  'Rating:' + " " + menu.rating %></p>
     <% }%>
